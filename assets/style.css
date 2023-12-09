@@ -1,7 +1,12 @@
 /* SETUP */
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0px;
+    background-color: #1A1A1A;
 }
 
 h1 {
@@ -10,12 +15,22 @@ h1 {
     color: white;
     margin-block-start: 0.2em;
     margin-block-end: -0.20000000000000073em;
+    user-select: none;
 }
 
 p {
     font-family: 'CenturyGothic';
     font-size: 1.5rem;
     color: white;
+    user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 @keyframes fadeInMoveDown {
@@ -152,6 +167,40 @@ p {
 
 /* CLASSES */
 
+.logo {
+    width: 300px;
+    margin: 10px;
+}
+
+.social-media-icon {
+    width: 40px;
+    margin: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: right;
+    flex: 2;
+    margin-right: 10px;
+}
+
+.top-bar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: #1a1a1a;
+    width: 100%;
+    z-index: 1002;
+    transition: background-color 0.3s ease; /* Smooth transition for background-color */
+}
+
+.top-bar p {
+    margin: 10px;
+}
+
 .backdrop {
     background-color: #1A1A1A;
     width: 100%;
@@ -172,7 +221,7 @@ p {
 .backdrop3 {
     background-color: #1A1A1A;
     width: 100%;
-    height: 1200px;
+    height: 950px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,11 +245,11 @@ p {
 }
 
 .grid {
-    width: 5000px; /* Width of the grid */
+    width: 5782px;
     position: absolute;
-    top: 75%;
+    top: 86%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the grid */
+    transform: translate(-50%, -50%);
 }
 
 .grid2 {
@@ -263,6 +312,21 @@ p {
     box-shadow: 0 0 500px rgba(86, 116, 202, 0.25);
     filter: blur(50px); /* Adjust the blur radius as needed */
 }
+
+.glowbox2 {
+    position: absolute;
+    width: 90%;
+    height: 4500px;
+    display: flex;
+    opacity: 25%;
+    background-color: rgba(202, 86, 187, 0.25); /* Adjust the rgba values for your color and opacity */
+    box-shadow: 0 0 500px rgba(202, 86, 187, 0.25);
+    filter: blur(50px); /* Adjust the blur radius as needed */
+    top: 3000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .header-container {
     width: 491px;
     position: relative;
@@ -309,4 +373,18 @@ p {
     width: 276px;
     height: 276px;
     margin: 30px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    background-color: #1A1A1A;
+    position: absolute;
+    width: 100%;
+    z-index: 1002;
+}
+
+.footer p {
+    margin: 20px;
 }
