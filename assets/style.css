@@ -1,0 +1,312 @@
+/* SETUP */
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Thunderstorm';
+    font-size: 7rem;
+    color: white;
+    margin-block-start: 0.2em;
+    margin-block-end: -0.20000000000000073em;
+}
+
+p {
+    font-family: 'CenturyGothic';
+    font-size: 1.5rem;
+    color: white;
+}
+
+@keyframes fadeInMoveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@font-face {
+    font-family: 'Thunderstorm';
+    src: url('/assets/fonts/Thunderstorm-Update.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('/assets/fonts/CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    .animate-in-0 {
+        animation: fadeInMoveDown 0.5s ease forwards;
+    }
+    
+    .animate-in-1 {
+        animation: fadeInMoveDown 1s ease forwards;
+    }
+    
+    .animate-in-1-5 {
+        animation: fadeInMoveDown 1.5s ease forwards;
+    }
+    
+    .animate-in-2 {
+        animation: fadeInMoveDown 2s ease forwards;
+    }
+
+    @keyframes rotate-in-down-right-animation {
+        0% {
+            transform: translate(0px, 0px) rotate(0deg);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translate(0px, 0px) rotate(24.53deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotate-in-down-left-animation {
+
+        0%,
+        0.2% {
+            transform: translate(0px, 0px) rotate(0deg);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: scale(1) rotate(-24.53deg) translate(0px, 0px);
+            opacity: 1;
+        }
+    }
+
+    button {
+        margin: -10px 0px;
+    }
+
+    .custom-btn {
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'CenturyGothic', sans-serif;
+        font-weight: bold;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+         box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+         7px 7px 20px 0px rgba(0,0,0,.1),
+         4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+      }
+
+    .btn-main {
+        background: #0B0F09;
+        border: none;
+        z-index: 1;
+    }
+    .btn-main:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 5px;
+        background-color: #e6c9fd;
+        background-image: linear-gradient(315deg, #e6c9fd 0%, #f49cfc 74%);
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+        transition: all 0.3s ease;
+    }
+    .btn-main:hover {
+        color: #000;
+    }
+    .btn-main:hover:after {
+        top: auto;
+        bottom: 0;
+        height: 100%;
+    }
+    .btn-main:active {
+        top: 2px;
+    }
+
+    .sticky {
+        position: -webkit-sticky; /* For Safari */
+        position: sticky;
+        padding-top: 250px;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+
+/* CLASSES */
+
+.backdrop {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.backdrop2 {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 4090px;
+    display: block;
+}
+
+.backdrop3 {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    position: relative; /* Changed to relative */
+    overflow: hidden;
+    top: 200px;
+}
+
+.grid-container2 {
+    width: 100%;
+    height: 25%;
+    position: relative; /* Changed to relative */
+    overflow: hidden;
+    top: -395px;
+}
+
+.grid {
+    width: 5000px; /* Width of the grid */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the grid */
+}
+
+.grid2 {
+    width: 2890px; /* Width of the grid */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg) ; /* Centers the grid */
+}
+
+
+.palm {
+    width: 500px;
+    position: absolute;
+}
+
+.palm-container {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    top: 50px;
+}
+
+.monstera-container {
+    position: absolute;
+    width: 100%;
+    height: 870px;
+    overflow: hidden;
+}
+
+.monstera {
+    position: absolute;
+    width: 635px;
+    right: -33px;
+    top: 195px;
+}
+
+#left-palm {
+    left: -330px;
+    top: 50px;
+    transform-origin: 100% 100%;
+    animation: rotate-in-down-right-animation 1s ease 0s 1 normal both running;
+}
+
+#right-palm {
+    right: -330px;
+    top: 50px;
+    transform-origin: 0% 100%;
+    animation: rotate-in-down-left-animation 1s ease 0s 1 normal both running;
+}
+
+.glowbox {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    opacity: 25%;
+    background-color: rgba(86, 116, 202, 0.25); /* Adjust the rgba values for your color and opacity */
+    box-shadow: 0 0 500px rgba(86, 116, 202, 0.25);
+    filter: blur(50px); /* Adjust the blur radius as needed */
+}
+.header-container {
+    width: 491px;
+    position: relative;
+    margin: 30px;
+}
+
+.outer-container {
+    display: flex;
+    z-index: 101;
+    top:  250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container2 {
+    display: flex;
+    z-index: 101;
+    top:  14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container3 {
+    display: flex;
+    z-index: 101;
+    top: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container img {
+    width: 276px;
+    height: 276px;
+    margin: 30px;
+}
+
+.outer-container2 img {
+    width: 276px;
+    height: 276px;
+    margin: 30px;
+}
+
+.outer-container3 img {
+    width: 276px;
+    height: 276px;
+    margin: 30px;
+}
