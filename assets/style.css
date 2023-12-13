@@ -1,4 +1,7 @@
 /* SETUP */
+html {
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: none;
@@ -41,6 +44,30 @@ img {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInMoveLeft {
+    0% {
+        transform: scale(1) rotate(-90deg) translate(0px, 112px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(-90deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMoveRight {
+    0% {
+        transform: scale(1) rotate(90deg) translate(0px, 112px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(90deg);
+        opacity: 1;
     }
 }
 
@@ -97,6 +124,18 @@ img {
         100% {
             transform: scale(1) rotate(-24.53deg) translate(0px, 0px);
             opacity: 1;
+        }
+    }
+
+    @keyframes float-animation {
+
+        0%,
+        100% {
+            transform: none;
+        }
+    
+        50% {
+            transform: translate(0px, -16px);
         }
     }
 
@@ -193,7 +232,7 @@ img {
     height: 70px;
     background-color: #1a1a1a;
     width: 100%;
-    z-index: 1002;
+    z-index: 1010;
     transition: background-color 0.3s ease; /* Smooth transition for background-color */
 }
 
@@ -387,4 +426,189 @@ img {
 
 .footer p {
     margin: 20px;
+}
+
+/* Books Page */
+
+.backdrop4 {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.matrix-container {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    height: 1420px;
+    top: 50px;
+}
+
+.matrix {
+    width: 4400px;
+    position: absolute;
+}
+
+#left-matrix {
+    left: -1979px;
+    top: 50px;
+    animation: fadeInMoveRight 1s cubic-bezier(0.65, 0, 0.35, 1) 0s 1 normal both running;
+}
+
+#right-matrix {
+    right: -1979px;
+    top: 50px;
+    animation: fadeInMoveLeft 1s cubic-bezier(0.65, 0, 0.35, 1) 0s 1 normal both running;
+}
+
+.bookshelf-container {
+    width: 100%;
+    height: 565px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -243px;
+}
+
+.bookshelf-container h1 {
+    margin: 20px;
+}
+
+.book-box {
+    display: flex;
+}
+
+.book-box img {
+    width: 250px;
+    height: auto;
+    margin: 20px;
+    z-index: 1002;
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+
+.book-box img:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+}
+
+.book-box img.shrink {
+    transform: scale(0.9); /* Shrink to 90% of the original size */
+}
+
+.doc-viewer {
+    z-index: 1002;
+    position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.doc-viewer-backdrop {
+    z-index: 1002;
+    position: relative;
+    height: 720px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+}
+
+.doc-viewer-backdrop img {
+    width: 500px;
+    height: auto;
+    margin: 40px;
+}
+
+.laser {
+    position: absolute;
+    top: -14px;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    opacity: 65%;
+    background-color: rgba(202, 86, 196, 1); /* Adjust the rgba values for your color and opacity */
+    box-shadow: 0 0 200px rgba(202, 86, 196, 1);
+    filter: blur(15px); /* Adjust the blur radius as needed */
+}
+
+.laser-overlay {
+    position: absolute;
+    top: -12px;
+    width: 100%;
+    height: 2%;
+    display: flex;
+    opacity: 65%;
+    background-color: rgb(255, 255, 255); /* Adjust the rgba values for your color and opacity */
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    filter: blur(5px); /* Adjust the blur radius as needed */
+    mix-blend-mode: screen;
+}
+
+.doc-viewer object {
+    z-index: 1002;
+    position: relative;
+    height: 720px;
+    width: 100%;
+}
+
+/* Contact Page */
+
+.backdrop5 {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 840px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.outer-container-2 {
+    display: flex;
+    z-index: 101;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container-2 img {
+    width: 376px;
+    height: 376px;
+    margin-top: 30px;
+}
+ 
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin-top: 30px;
+}
+
+form input, form textarea {
+    width: 98%;
+    font-family: 'CenturyGothic';
+    font-size: 1rem;
+    margin: 1px;
+}
+
+form button {
+    margin: 18px 0px 18px 0px;
+}
+
+.moon {
+    position: absolute;
+    top: 10px;
+    z-index: 999;
+    transform-origin: 50% 50%;
+    animation: float-animation 2s ease 0s infinite normal both running;
+}
+
+.landscape {
+    position: relative;
+    z-index: 1000;
 }
