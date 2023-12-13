@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Change the HTML content of the element
         elementToChange.innerHTML = `
             <div class="doc-viewer" id="CH1-viewer">
-              <object data="/assets/pdf/RAM_Issue1.pdf" type="application/pdf">
-                <p>Alternative text - include a link <a href="/assets/pdf/RAM_Issue1.pdf">to the PDF!</a></p>
+              <object data="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf" type="application/pdf">
+                <p>Radioactive Analog Memories Chapter 1 PDF File<a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf"></a></p>
               </object>
             </div>`;
     });
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Change the HTML content of the element
         elementToChange.innerHTML = `
             <div class="doc-viewer" id="CH2-viewer">
-              <object data="/assets/pdf/RAM_Issue2.pdf" type="application/pdf">
-                <p>Alternative text - include a link <a href="/assets/pdf/RAM_Issue2.pdf">to the PDF!</a></p>
+              <object data="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf" type="application/pdf">
+                <p>Radioactive Analog Memories Chapter 2 PDF File<a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf"></a></p>
               </object>
             </div>`;
     });
