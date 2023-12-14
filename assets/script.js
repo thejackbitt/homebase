@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var menuIcon = document.getElementById('rotating-image');
+  var menu = document.querySelector('.hamburger-menu-list');
+
+  menuIcon.addEventListener('click', function() {
+    this.classList.toggle('rotated');
+    menu.classList.toggle('menu-open');
+  });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const frameCount = 160;
   const startingFrame = 149;
@@ -16,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   function updateFrame() {
       let frameIndex = (Math.floor(window.scrollY / frameHeight) + startingFrame) % frameCount;
-      let imagePath = `/assets/images/scroll_anim/HelmetPreview_${frameIndex.toString().padStart(5, '0')}.png`;
+      let imagePath = `./assets/images/scroll_anim/HelmetPreview_${frameIndex.toString().padStart(5, '0')}.png`;
       let image = new Image();
       image.src = imagePath;
       image.onload = function() {
@@ -134,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="doc-viewer" id="AI-viewer">
         <div class="doc-viewer-backdrop">
           
-          <img class="animate-in-1" src="/assets/images/Room3Artwork.jpg">
+          <img class="animate-in-1" src="./assets/images/Room3Artwork.jpg">
           <div class="header-container animate-in-1">
             <p>Each chapter goes through these concepts in detail and provides practical applications for business purposes. This business is perfect for small businesses, entrepreneurs and individuals looking to break into the tech industry and get on the ground floor of something big. Jack is passionate about democratizing technical skills and wants to put the power of big tech back in the hands of the everyday American.</p>
             <a href="https://www.amazon.com/Generative-Business-Purposes-Principles-Diffusion-ebook/dp/B0CLPN3Q91/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1699912515&sr=8-1" target="_blank">

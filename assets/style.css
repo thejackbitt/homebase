@@ -73,14 +73,14 @@ img {
 
 @font-face {
     font-family: 'Thunderstorm';
-    src: url('/assets/fonts/Thunderstorm-Update.otf') format('opentype');
+    src: url('/homebase/assets/fonts/Thunderstorm-Update.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
     }
 
 @font-face {
     font-family: 'CenturyGothic';
-    src: url('/assets/fonts/CenturyGothic.ttf') format('truetype');
+    src: url('/homebase/assets/fonts/CenturyGothic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     }
@@ -611,4 +611,243 @@ form button {
 .landscape {
     position: relative;
     z-index: 1000;
+}
+
+/* Breakpoints */
+
+.hamburger-menu-list {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #263c7e;
+    z-index: 1005;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: top 0.5s; /* Smooth sliding effect */
+    top: -100vh;
+}
+
+.hamburger-menu-list a p {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.hamburger-menu-list a .social-media-icon {
+    width: 54px;
+}
+
+.hamburger-menu-list .social-media-collection {
+    width: 152px;
+}
+
+.hamburger-menu-list.menu-open {
+    top: 0; /* Slide in to be fully visible */
+  }
+
+.hamburger-menu {
+    display: none;
+}
+
+#rotating-image {
+    transition: transform 0.5s ease;
+  }
+  
+  .rotated {
+    transform: rotate(90deg);
+  }
+
+  #rotating-image.rotated {
+    transform: rotate(90deg);
+  }
+
+  .social-media-collection {
+    width: 125px;
+  }
+
+@media screen and (max-width: 938px) {
+    .button-container {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        text-align: right;
+        flex: 2;
+        margin-right: 10px;
+    }
+
+    .hamburger-menu img {
+        width: 50px;
+        margin: 15px;
+    }
+
+    .header-container {
+        width: 330px;
+    }
+
+    .outer-container img {
+        width: 210px;
+        height: auto;
+    }
+
+    .outer-container2 {
+        top: 0vh;
+    }
+
+    .palm {
+        width: 268px;
+    }
+
+    #left-palm {
+        left: -190px;
+    }
+
+    .grid-container {
+        top: 110px;
+    }
+
+    #right-palm {
+        right: -190px;
+    }
+
+    #gifCanvas {
+        height: 240px;
+        width: 240px;
+    }
+
+    .backdrop3 {
+        height: 824px;
+    }
+
+    .monstera {
+        width: 370px;
+        top: 367px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #right-matrix {
+        right: -2218px;
+    }
+
+    #left-matrix {
+        left: -2218px;
+    }
+
+    .book-box img {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .outer-container {
+        flex-direction: column;
+        top: 203px;
+    }
+
+    .outer-container2 {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sticky {
+        padding-top: 0px;
+    }
+
+    .outer-container img {
+        margin: 0px;
+    }
+
+    .header-container {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outer-container2 .header-container {
+        margin: -10px;
+    }
+
+    .grid {
+        width: 4187px;
+    }
+
+    .grid-container {
+        top: -18px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #right-matrix {
+        right: -2300px;
+    }
+
+    #left-matrix {
+        left: -2300px;
+    }
+
+    .book-box {
+        flex-direction: column;
+    }
+
+    .bookshelf-container {
+        height: auto;
+        margin-top: -397px;
+    }
+
+    .outer-container-2 {
+        flex-direction: column;
+    }
+
+    .outer-container-2 img {
+        width: 191px;
+        height: auto;
+        margin-top: 66px;
+    }
+
+    .custom-btn {
+        width: 270px;
+    }
+
+    form {
+        width: 270px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .logo {
+        width: 200px;
+    }
+
+    .grid {
+        width: 2500px;
+        top: 130px;
+    }
+
+    .grid-container {
+        top: -39px;
+    }
 }
