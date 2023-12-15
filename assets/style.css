@@ -477,6 +477,7 @@ img {
 
 .bookshelf-container h1 {
     margin: 20px;
+    z-index: 1005;
 }
 
 .book-box {
@@ -609,7 +610,7 @@ form button {
 }
 
 .landscape {
-    position: relative;
+    position: absolute;
     z-index: 1000;
 }
 
@@ -664,6 +665,11 @@ form button {
 
   .social-media-collection {
     width: 125px;
+  }
+
+  .epcot {
+    width: 376px;
+    height: 376px;
   }
 
 @media screen and (max-width: 938px) {
@@ -747,6 +753,19 @@ form button {
     .book-box img {
         width: 165px;
     }
+
+    .doc-viewer-backdrop img {
+        width: 312px;
+    }
+
+    .epcot {
+        width: 234px;
+        height: 234px;
+      }
+    
+      .landscape {
+        position: absolute;
+      }
 }
 
 @media screen and (max-width: 620px) {
@@ -817,6 +836,14 @@ form button {
         margin-top: -397px;
     }
 
+    .doc-viewer-backdrop {
+        flex-direction: column;
+    }
+
+    .doc-viewer-backdrop img {
+        margin: -20px;
+    }
+
     .outer-container-2 {
         flex-direction: column;
     }
@@ -833,6 +860,19 @@ form button {
 
     form {
         width: 270px;
+    }
+
+    .grid2 {
+        width: 1700px;
+    }
+
+    .grid-container2 {
+        top: -250px;
+    }
+
+    .epcot {
+        width: 228px;
+        height: 150px;
     }
 
 }
