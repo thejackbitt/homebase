@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Change the HTML content of the element
         elementToChange.innerHTML = `
             <div class="doc-viewer" id="CH1-viewer">
-              <object data="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf" type="application/pdf">
-                <p>Radioactive Analog Memories Chapter 1 PDF File<a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf"></a></p>
-              </object>
+              <iframe src="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf" width="100%" height="600">
+                <p>Radioactive Analog Memories Chapter 1 PDF File <a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter1.pdf">Download Here</a></p>
+              </iframe>
             </div>`;
     });
 });
@@ -125,11 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() {
         // Change the HTML content of the element
         elementToChange.innerHTML = `
-            <div class="doc-viewer" id="CH2-viewer">
-              <object data="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf" type="application/pdf">
-                <p>Radioactive Analog Memories Chapter 2 PDF File<a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf"></a></p>
-              </object>
-            </div>`;
+          <div class="doc-viewer" id="CH2-viewer">
+          <iframe src="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf" width="100%" height="600">
+            <p>Radioactive Analog Memories Chapter 2 PDF File <a href="https://jackbittner.net/assets/Radioactive_AnalogMemories_Chapter2.pdf">Download Here</a></p>
+          </iframe>
+        </div>`;
     });
 });
 
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
     emailjs.send('service_4c5bfis', 'template_pw8m169', emailParams) // Pass emailParams here
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
-        window.location.href = '/thankyou.html'; // Redirect to thankyou.html
+        window.location.href = './thankyou.html'; // Redirect to thankyou.html
       }, function (error) {
         console.log('FAILED...', error);
         alert('Failed to send the email. Please try again.');
