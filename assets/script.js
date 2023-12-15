@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
   const frameCount = 160;
   const startingFrame = 149;
@@ -18,24 +16,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
   const frameHeight = documentHeight / frameCount;
 
-  // Set canvas size (adjust as needed)
-  canvas.width = 340;  // Set the width of the canvas
-  canvas.height = 340; // Set the height of the canvas
+  canvas.width = 340;
+  canvas.height = 340;
 
-  const topBar = document.querySelector('.top-bar');
-  const startColor = '#1A1A1A';
-  const endColor = '#1a1a1a79';
+  const preloadedImages = [];
+  let imagesLoaded = 0;
+  let imagesErrored = 0;
 
-  function updateFrame() {
-      let frameIndex = (Math.floor(window.scrollY / frameHeight) + startingFrame) % frameCount;
-      let imagePath = `./assets/images/scroll_anim/HelmetPreview_${frameIndex.toString().padStart(5, '0')}.png`;
-      let image = new Image();
-      image.src = imagePath;
-      image.onload = function() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-      };
+  function imageLoaded() {
+      imagesLoaded++;
+      if (imagesLoaded === frameCount) {
+          window.addEventListener('scroll', updateFrame);
+          updateFrame(); // Initial call to display the first frame
+      }
   }
+
+  function imageErrored() {
+      imagesErrored++;
+      console.error('Error loading an image');
+      // Handle the error, e.g., by retrying or skipping this image
+  }
+
+  for (let i = 0; i < frameCount; i++) {
+    // Calculate the correct frame number for each image
+    let frameNumber = (i + startingFrame) % frameCount;
+    let imagePath = `./assets/images/scroll_anim/HelmetPreview_${frameNumber.toString().padStart(5, '0')}.png`;
+    let image = new Image();
+    image.onload = imageLoaded;
+    image.onerror = imageErrored;
+    image.src = imagePath;
+    preloadedImages[i] = image; // Store image based on loop index
+}
+
+function updateFrame() {
+  let scrollFrameIndex = Math.floor(window.scrollY / frameHeight);
+  let frameIndex = scrollFrameIndex % frameCount; // Simple modulo operation
+  let image = preloadedImages[frameIndex];
+  if (image && image.complete && image.naturalWidth !== 0) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  }
+}
 
   window.addEventListener('scroll', () => {
       updateFrame();
