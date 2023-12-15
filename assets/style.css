@@ -640,7 +640,12 @@ form button {
 }
 
 .hamburger-menu-list .social-media-collection {
-    width: 152px;
+    width: 200px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: space-evenly;
 }
 
 .hamburger-menu-list.menu-open {
