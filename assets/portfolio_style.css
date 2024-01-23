@@ -25,36 +25,24 @@ a {
     color: inherit;
 }
 
-@font-face{
-    font-family: 'Thunderstorm';
-    src: url('/homework/repository/portfolio/assets/fonts/Thunderstorm-Update.ttf') format('truetype');
-}
-
-@font-face{
-    font-family: 'CenturyGothic';
-    src: url('/portfolio/assets/fonts/CenturyGothic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 h1 {
     color: var(--hot-pink);
-    font-family: Thunderstorm;
+    font-family: 'Thunderstorm';
     font-weight: 500;
     font-size: 9rem;
 }
 
-h2, h3, p {
+.portfolio-text {
     color: white;
-    font-family: CenturyGothic;
+    font-family: 'CenturyGothic';
 }
 
-p {
+.portfolio-text p {
     font-size: 1.3rem;
     margin-block-start: 0px;
 }
 
-h2 {
+.portfolio-text h2 {
     font-size: 2.3rem;
     margin-block-end: 0px;
 }
@@ -339,11 +327,11 @@ header a {
         --hero-img-margin: -89px;
     }
 
-    h2 {
+    .portfolio-text h2 {
         font-size: 1.9rem;
     }
 
-    p {
+    .portfolio-text p {
         font-size: 0.9rem;
     }
 
