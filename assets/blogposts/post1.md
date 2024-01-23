@@ -28,3 +28,4 @@ Based on what we’ve observed with Disney, it seems like they are creating pers
 
 Disney used to stand for family animation and films that were generally appealing, not hyper-niche.  If faulty personas are to blame for their recent track record, it would make sense.  Content that appeals to only the marketing team is reflective of the mistakes many companies make with personas.  So here’s to Disney in 2024.  Let’s hope they get back to making art that their audience loves.	
 
+<!-- 01/22/24 -->
