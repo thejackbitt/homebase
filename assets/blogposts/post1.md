@@ -1,3 +1,5 @@
+![Placeholder image featuring artwork of a beautiful, 80's style sunset](../images/placeholder.jpg)
+
 # Why Does Disney Keep Doing This?
 It has often been said that “the best artists create for their audience whereas others artists create for themselves.”  I’ve seen this quote be applied to many different situations across the internet but the one I’m focusing on today is the arguable king of the art media industry, Disney.
 
