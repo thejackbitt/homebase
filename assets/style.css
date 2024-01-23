@@ -85,6 +85,13 @@ img {
     font-style: normal;
     }
 
+@font-face {
+    font-family: 'Arkanoid';
+    src: url('/homebase/assets/fonts/ArkanoidSolid-pgPv.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
     .animate-in-0 {
         animation: fadeInMoveDown 0.5s ease forwards;
     }
@@ -477,7 +484,7 @@ img {
 
 .bookshelf-container h1 {
     margin: 20px;
-    z-index: 1005;
+    z-index: 100;
 }
 
 .book-box {
@@ -895,4 +902,79 @@ form button {
     .grid-container {
         top: -39px;
     }
+}
+
+/* Blog */
+
+.spacer {
+    height: 70px;
+}
+
+.blogheader {
+    height: 215px;
+    width: 100%;
+    border: white solid 1px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    position: relative;
+    z-index: -5;
+}
+
+.header-box {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.pre-header {
+    color: #d529ce;
+    font-family: 'Thunderstorm';
+    font-size: 4rem;
+    margin-block-start: 0.2em;
+    margin-block-end: -0.20000000000000073em;
+    user-select: none;
+    z-index: 5;
+}
+
+.post-header {
+    font-family: 'Arkanoid';
+    font-size: 5.5rem;
+    color: white;
+    margin-block-start: 0.2em;
+    margin-block-end: -0.20000000000000073em;
+    margin-top: -1px;
+    user-select: none;
+    z-index: 5;
+}
+
+.memphis-square {
+    height: 400px;
+    width: 400px;
+    rotate: 45deg;
+    border: #d529ce solid 10px;
+    position: absolute;
+    z-index: 5;
+}
+
+#sR {
+    right: -112px;
+    margin-top: -262px;
+}
+
+#sL {
+    left: -112px;
+    margin-top: -100px;
+}
+
+.blogheader .grid-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    z-index: -1;
+}
+
+.blogheader .grid-container .grid {
+    width: 3895px;
+    top: 305px;
 }
