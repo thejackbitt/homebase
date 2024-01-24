@@ -1050,3 +1050,40 @@ form button {
 .article-indice:hover, .article-indice:active {
     transform: scale(105%);
 }
+
+/* Posts */
+
+.postheader {
+    height: 400px;
+    width: 100%;
+    border: white solid 1px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    position: relative;
+    z-index: -5;
+}
+
+.post-container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.post-container h1 {
+    font-family: 'CenturyGothic';
+    font-size: 4rem;
+}
+
+.post-container h2 {
+    font-family: 'CenturyGothic';
+    font-size: 2rem;
+    color: white;
+    margin-bottom: -20px;
+}
+
+.post-section .backdrop5 {
+    height: fit-content;
+}
+
+.post-section .backdrop5 .glowbox {
+    height: 400vh;
+}
