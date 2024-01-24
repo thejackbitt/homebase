@@ -1,5 +1,4 @@
-const blogpostLib = ['post1.md']
-
+import { blogPostLib } from './assets/script.js';
 
 async function processMarkdownFiles(fileNames) {
     for (let fileName of fileNames) {
@@ -8,7 +7,6 @@ async function processMarkdownFiles(fileNames) {
                 const response = await fetch(`./assets/blogposts/${fileName}`);
                 const content = await response.text();
 
-                // Process the content
                 const lines = content.split('\n');
                 const firstHeader = lines.find(line => line.startsWith('#'));
                 let mainImg;
@@ -36,7 +34,6 @@ async function processMarkdownFiles(fileNames) {
                     console.log('No date found in file');
                 };
 
-                // Create and append the new article element
                 const newArticle = document.createElement('div');
                 newArticle.className = 'article-indice';
                 newArticle.innerHTML = `
@@ -55,4 +52,4 @@ async function processMarkdownFiles(fileNames) {
     }
 }
 
-processMarkdownFiles(blogpostLib);
+processMarkdownFiles(blogPostLib);
