@@ -1008,7 +1008,6 @@ form button {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
 }
 
 .article-indice {
@@ -1020,8 +1019,6 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.2s ease;
-    z-index: 1000;
 }
 
 .a-i-img {
@@ -1029,13 +1026,10 @@ form button {
     width: 250px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .a-i-img img {
-    width: 180%;
+    width: 100%;
 }
 
 .a-i-header {
@@ -1045,45 +1039,4 @@ form button {
     user-select: none;
     margin-block-start: 1em;
     margin-block-end: -0.5em;
-}
-
-.article-indice:hover, .article-indice:active {
-    transform: scale(105%);
-}
-
-/* Posts */
-
-.postheader {
-    height: 400px;
-    width: 100%;
-    border: white solid 1px;
-    background-color: #1a1a1a;
-    overflow: hidden;
-    position: relative;
-    z-index: -5;
-}
-
-.post-container {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.post-container h1 {
-    font-family: 'CenturyGothic';
-    font-size: 4rem;
-}
-
-.post-container h2 {
-    font-family: 'CenturyGothic';
-    font-size: 2rem;
-    color: white;
-    margin-bottom: -20px;
-}
-
-.post-section .backdrop5 {
-    height: fit-content;
-}
-
-.post-section .backdrop5 .glowbox {
-    height: 400vh;
 }
