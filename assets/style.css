@@ -1008,6 +1008,8 @@ form button {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
 }
 
 .article-indice {
@@ -1019,6 +1021,11 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.2s ease;
+}
+
+.article-indice:hover, .article-indice:active {
+    scale: 105%;
 }
 
 .a-i-img {
@@ -1026,10 +1033,12 @@ form button {
     width: 250px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .a-i-img img {
-    width: 100%;
+    height: 100%;
 }
 
 .a-i-header {

@@ -101,13 +101,13 @@ inquirer
             <script src="../script.js"></script>
         <!-- BEGIN HEADER CODE -->
         <div class="hamburger-menu-list">
-            <a href="portfolio.html" target="_blank">
+            <a href="../../portfolio.html">
               <p>PORTFOLIO</p>
               </a>
-              <a href="books.html">
-                <p>BOOKS</p>
+              <a href="../../blog.html">
+                <p>BLOG</p>
                </a>
-              <a href="contact.html">
+              <a href="../../contact.html">
                 <p>CONTACT</p>
               </a>
               <div class="social-media-collection">
@@ -126,17 +126,17 @@ inquirer
               </div>
           </div>
           <div class="top-bar">
-            <a href="index.html">
+            <a href="../../index.html">
               <img class="logo" src="../images/HeaderImage_transparent.png">
             </a>
             <div class="button-container">
-              <a href="portfolio.html">
+              <a href="../../portfolio.html">
               <p>PORTFOLIO</p>
               </a>
-              <a href="books.html">
-                <p>BOOKS</p>
+              <a href="../../blog.html">
+                <p>BLOG</p>
                </a>
-              <a href="contact.html">
+              <a href="../../contact.html">
                 <p>CONTACT</p>
               </a>
               <a href="https://www.instagram.com/the.jack.bitt/" target="_blank">
@@ -159,11 +159,11 @@ inquirer
           <!-- END HEADER CODE -->
           <div class="spacer"></div>
           <div class="postheader">
-            <img src="../images/${imgPath}">
+            <img id="mainImage" src="../images/${imgPath}">
           </div>
           <div class="postcontainer">
           <h1>${title}</h1>
-          <p>${today}</p>
+          <p id="postDate">${today}</p>
           <div class="spancontainer">
             <span>${author}</span>
           </div>
@@ -174,7 +174,7 @@ inquirer
         </div>
           <!-- BEGIN FOOTER CODE -->
         <div class="footer">
-        <p>© 2023 JackBittner.net. All rights reserved.</p>
+        <p>© 2024 JackBittner.net. All rights reserved.</p>
         <div class="button-container">
             <a href="https://www.instagram.com/the.jack.bitt/">  
             <img class="social-media-icon" src="../images/instagram.svg" target="_blank">
