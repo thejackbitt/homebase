@@ -1,6 +1,3 @@
-const blogPostLib = ['post1.md']
-export { blogPostLib };
-
 document.addEventListener('DOMContentLoaded', function() {
   var menuIcon = document.getElementById('rotating-image');
   var menu = document.querySelector('.hamburger-menu-list');
