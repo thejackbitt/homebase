@@ -150,11 +150,11 @@ img {
 
         0%
         {
-            border: #d529ce solid 0.1rem;
+            scale: 0%;
         }
     
         100% {
-            border: #d529ce solid 1rem;
+            scale: 100%;
         }
     }
 
@@ -974,6 +974,7 @@ form button {
     height: 400px;
     width: 400px;
     rotate: 45deg;
+    border: #d529ce solid 1rem;
     animation: trace-animation 0.5s ease forwards;
     position: absolute;
     z-index: 5;
@@ -1030,7 +1031,7 @@ form button {
 
 .a-i-img {
     height: 250px;
-    width: 250px;
+    width: 272px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -1050,10 +1051,16 @@ form button {
     margin-block-end: -0.5em;
 }
 
-/* Blog */
+@media screen and (max-width: 938px) {
+    #sR {
+        display: none;
+    }
+}
+
+/* Post */
 
 .postheader {
-    height: 215px;
+    height: 560px;
     width: 99.9%;
     border: white solid 1px;
     background-color: #1a1a1a;
@@ -1063,6 +1070,16 @@ form button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.parallaxContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallaxTarget {
+    position: absolute;
+    width: 100%;
 }
 
 .postcontainer {
@@ -1112,4 +1129,32 @@ form button {
 .contentcontainer {
     position: relative;
     overflow: hidden;
+}
+
+.contentcontainer .glowbox{
+    top: -10px;
+}
+
+@media screen and (max-width: 938px) {
+    .parallaxTarget {
+        width: 250%;
+    }
+
+    .postcontainer h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .parallaxTarget {
+        width: 400%;
+    }
+
+    .postcontainer h1 {
+        font-size: 2rem;
+    }
+
+    .postheader {
+        height: 380px;
+    }
 }

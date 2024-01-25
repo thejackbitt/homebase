@@ -1,5 +1,6 @@
 const htmlFiles = [
     './assets/blogposts/test.html',
+    './assets/blogposts/disney1.html'
 ];
 
 htmlFiles.forEach(url => {
