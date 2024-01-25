@@ -1,5 +1,17 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^3.11.0"
-  }
+    "@emailjs/browser": "^3.11.0",
+    "dayjs": "^1.11.10",
+    "inquirer": "^8.2.4"
+  },
+  "name": "homebase",
+  "description": "My homepage, resume and portfolio!",
+  "version": "1.0.0",
+  "main": "articleScripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
