@@ -112,16 +112,16 @@ inquirer
               </a>
               <div class="social-media-collection">
                 <a href="https://www.instagram.com/the.jack.bitt/" target="_blank">
-                  <img class="social-media-icon" src="./assets/images/instagram.svg">
+                  <img class="social-media-icon" src="../images/instagram.svg">
                 </a>
                 <a href="https://www.tiktok.com/@jack.bitt" target="_blank">
-                  <img class="social-media-icon" src="./assets/images/tiktok.svg">
+                  <img class="social-media-icon" src="../images/tiktok.svg">
                 </a>
                 <a href="https://www.linkedin.com/in/jack-bittner-9013b9152/" target="_blank">
-                <img class="social-media-icon" src="./assets/images/linkedin.svg">
+                <img class="social-media-icon" src="../images/linkedin.svg">
                 </a>
                 <a href="https://www.youtube.com/channel/UCA6P5i9lvyDYtwEQFeQsd1w" target="_blank">
-                <img class="social-media-icon" src="./assets/images/youtube.svg">
+                <img class="social-media-icon" src="../images/youtube.svg">
                 </a>
               </div>
           </div>
@@ -163,13 +163,13 @@ inquirer
           </div>
           <div class="postcontainer">
           <h1>${title}</h1>
-          <p id="postDate">${today}</p>
+          <p id="postDate" style="padding-top: 10px;">${today}</p>
           <div class="spancontainer">
             <span>${author}</span>
           </div>
           <div class="contentcontainer">
               ${paragraphElement}
-              <div class="glowbox" style="z-index: 0"></div>
+              <div class="glowbox" style="z-index: -1"></div>
           </div>
         </div>
           <!-- BEGIN FOOTER CODE -->
