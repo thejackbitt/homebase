@@ -186,6 +186,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const parallaxImage = document.querySelector('.parallaxTarget');
+  const parallaxContainer = document.querySelector('.parallaxContainer');
+
+  function updateParallax() {
+      let offset = window.scrollY - parallaxContainer.offsetTop;
+      parallaxImage.style.top = -100 + (-offset * 0.5 ) + 'px';
+  }
+
+  updateParallax();
+
+  window.addEventListener('scroll', updateParallax);
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('submitBtn').addEventListener('click', function (event) {
     event.preventDefault();
